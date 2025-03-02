@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spesial Buat Kamu</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #ffe6e6;
+            margin: 0;
+            padding: 50px;
+        }
+        h1 {
+            color: #ff4d4d;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .yes {
+            background-color: #ff4d4d;
+            color: white;
+        }
+        .no {
+            background-color: #cccccc;
+            color: black;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Maukah kamu jadi pacarku? ❤️</h1>
+        <button class="yes" onclick="alert('Yeay! Aku sayang kamu ❤️')">Ya</button>
+        <button class="no" onmouseover="pindahTombol(this)">Tidak</button>
+    </div>
+    
+    <script>
+        function pindahTombol(button) {
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 50);
+            button.style.left = x + 'px';
+            button.style.top = y + 'px';
+        }
+    </script>
+</body>
+</html>
