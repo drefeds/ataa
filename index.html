@@ -1,31 +1,77 @@
-<audio id="bgMusic" autoplay loop>
-    <source src="https://drive.google.com/file/d/166k_HgpRsleKGprb8JCmRLZKWPHsLOpt/viewid=ABC123" type="audio/mpeg">
-    Browser kamu tidak mendukung audio.
-</audio>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kata-Kata Semangat Untukmu</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 400px;
+        }
+        h1 {
+            color: #ff4b5c;
+            font-size: 24px;
+        }
+        p {
+            font-size: 18px;
+            color: #333;
+        }
+        .quote {
+            font-style: italic;
+            font-size: 20px;
+            color: #ff4b5c;
+            margin-top: 20px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 12px 20px;
+            font-size: 16px;
+            background: #ff4b5c;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #ff1e40;
+        }
+    </style>
 </head>
 <body>
-<div class="container">
-    <h1>haloo ataa happy sunday</h1>
-    <p>palleell adaa sesuatuu buat ataa</p>
-    <p class="quote" id="quoteText">"cumaa kata kataa gajelas aja siii."</p>
-    <button onclick="gantiKata()">Klik untuk Dapat Kata Semangat Lagi!</button>
-</div>
-
-<script>
-    const quotes = [
-        "Jangan menyerah, kamu lebih kuat dari yang kamu kira!",
-        "Aku bangga sama kamu, teruslah berjuang!",
-        "Hari ini mungkin sulit, tapi besok akan lebih baik!",
-        "Kamu berharga dan aku selalu mendukungmu!",
-        "Tetap tersenyum, karena dunia butuh cahayamu!",
-        "Jangan takut gagal, setiap langkah adalah kemajuan!",
-        "Aku percaya sama kamu, kamu pasti bisa!"
-    ];
+    <audio id="bgMusic" autoplay loop>
+        <source src="https://your-hosting.com/audio.mp3" type="audio/mpeg">
+        Browser kamu tidak mendukung audio.
+    </audio>
     
-    function gantiKata() {
-        let randomIndex = Math.floor(Math.random() * quotes.length);
-        document.getElementById("quoteText").innerText = quotes[randomIndex];
-    }
-</script>
+    <div class="container">
+        <h1>Hai, Ini Buat Kamu! ❤️</h1>
+        <p>Aku tahu kadang hari terasa berat, tapi jangan lupa bahwa kamu kuat dan luar biasa! 💪</p>
+        <p class="quote" id="quoteText">"Semangat terus ya! Aku selalu ada buat kamu."</p>
+        <button onclick="gantiKata()">Klik untuk Dapat Kata Semangat Lagi!</button>
+    </div>
+    
+    <script>
+        const quotes = ["Jangan menyerah, kamu lebih kuat dari yang kamu kira! Aku bangga sama kamu, teruslah berjuang! Hari ini mungkin sulit, tapi besok akan lebih baik! Kamu berharga dan aku selalu mendukungmu! Tetap tersenyum, karena dunia butuh cahayamu! Jangan takut gagal, setiap langkah adalah kemajuan! Aku percaya sama kamu, kamu pasti bisa!"];
+        
+        function gantiKata() {
+            let randomIndex = Math.floor(Math.random() * quotes.length);
+            document.getElementById("quoteText").innerText = quotes[randomIndex];
+        }
+    </script>
 </body>
 </html>
