@@ -36,7 +36,7 @@
         }
         .quote {
             font-style: italic;
-            font-size: 20px;
+            font-size: 16px;
             color: #ff4b5c;
             margin-top: 20px;
             transition: opacity 0.5s ease-in-out;
@@ -83,25 +83,19 @@
         <h1>haloo ataaa, happy sundayyy</h1>
         <p>palell ada sesuatuuu</p>
         <p class="quote" id="quoteText">"cumaa kataa kataa aja siii"</p>
-        <button onclick="gantiKata()">pencett akuuu!!!</button>
+        <button onclick="tampilkanKata()">pencett akuuu!!!</button>
     </div>
     
     <script>
-        const quotes = [
-            "i really really hope you can stop blaming yourself for the things you can't control...",
-            "ataa jangan terlalu keras sama diri sendii yaa...",
-            "makasii udaa jadi ketua mpk yang hebatttt...",
-            "miss you my favorite star..."
-        ];
-        
-        function gantiKata() {
-            let randomIndex = Math.floor(Math.random() * quotes.length);
+        const message = `"i really really hope you can stop blaming yourself for the things you can't control. ataa ingatt yaa jngn trus trusan salahin diri ataa, kalo ataa rasa uda lakuin semampu ata tapi orang lain ga puas dengan itu jngn salahin diri ataa okeyy kita gabakalan perna bisa puasin kemauan manusia harus ingat inii, ataa kuatt ataa hebatt makasii udaa bertahan udaa lewatii semuanyaaa trimakasii udaa jadi ketua mpk yang hebaatttt udaa jadii temann yang baikkkk udaa lakuin terbaikk untuk orang sekitar ataaa, pallel sayang ata 'anggap aj gabaca apa apa', ataa jangan terlalu keras sama diri sendii yaa pokoknyaa kalo ada apaa apaa jangan gengsi kasi tau sa okeeyy walaupun kedepannya kita ga bicara lagi tapi sa tetap selalu ada disamping ata, makasihh udaa jadii orang baiikk makasii udaa perna tunjukin ke sa rasa sayang yg gaperna sa dapatin makasihhh makasihhh makasihhh makaksihhhh, miss you my favorite star."`;
+
+        function tampilkanKata() {
             let quoteElement = document.getElementById("quoteText");
 
             // Animasi perubahan teks
             quoteElement.style.opacity = "0";
             setTimeout(() => {
-                quoteElement.innerText = quotes[randomIndex];
+                quoteElement.innerText = message;
                 quoteElement.style.opacity = "1";
             }, 500);
         }
