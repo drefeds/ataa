@@ -1,0 +1,31 @@
+<audio id="bgMusic" autoplay loop>
+    <source src="music.mp3" type="audio/mpeg">
+    Browser kamu tidak mendukung audio.
+</audio>
+</head>
+<body>
+<div class="container">
+    <h1>haloo ataa happy sunday</h1>
+    <p>palleell adaa sesuatuu buat ataa</p>
+    <p class="quote" id="quoteText">"cumaa kata kataa gajelas aja siii."</p>
+    <button onclick="gantiKata()">Klik untuk Dapat Kata Semangat Lagi!</button>
+</div>
+
+<script>
+    const quotes = [
+        "Jangan menyerah, kamu lebih kuat dari yang kamu kira!",
+        "Aku bangga sama kamu, teruslah berjuang!",
+        "Hari ini mungkin sulit, tapi besok akan lebih baik!",
+        "Kamu berharga dan aku selalu mendukungmu!",
+        "Tetap tersenyum, karena dunia butuh cahayamu!",
+        "Jangan takut gagal, setiap langkah adalah kemajuan!",
+        "Aku percaya sama kamu, kamu pasti bisa!"
+    ];
+    
+    function gantiKata() {
+        let randomIndex = Math.floor(Math.random() * quotes.length);
+        document.getElementById("quoteText").innerText = quotes[randomIndex];
+    }
+</script>
+</body>
+</html>
