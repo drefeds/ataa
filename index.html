@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>palleelll sayangg ataaa</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
         body {
             display: flex;
             justify-content: center;
@@ -13,14 +15,16 @@
             background: linear-gradient(135deg, #ff9a9e, #fad0c4);
             font-family: 'Poppins', sans-serif;
             margin: 0;
+            animation: fadeIn 1.5s ease-in-out;
         }
         .container {
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.9);
             padding: 30px;
             border-radius: 15px;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
             text-align: center;
             max-width: 400px;
+            animation: slideUp 1s ease-in-out;
         }
         h1 {
             color: #ff4b5c;
@@ -35,6 +39,7 @@
             font-size: 20px;
             color: #ff4b5c;
             margin-top: 20px;
+            transition: opacity 0.5s ease-in-out;
         }
         button {
             margin-top: 20px;
@@ -46,9 +51,25 @@
             border-radius: 25px;
             cursor: pointer;
             transition: 0.3s;
+            animation: bounce 2s infinite;
         }
         button:hover {
             background: #ff1e40;
+            transform: scale(1.1);
+        }
+
+        /* Animasi */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
         }
     </style>
 </head>
@@ -66,11 +87,23 @@
     </div>
     
     <script>
-        const quotes = ["i really really hope you can stop blaming yourself for the things you can't control. you have a good soul, I know you do. mistakes were made, but that doesn't mean they should be held against you forever. some people get stuck on your past mistakes just to make you feel guilty again, to trap you in that guilt over and over. yes, it all started because of your fault, but when people talk behind your back after you've already regretted those things, it's no longer your burden to carry. you apologized, and that's all that matters. i hope you realize that you've already done your best in handling everything. you are a responsible soul, and I'm truly glad I met you. i miss you. I hope you're doing well, my favorite star."];
+        const quotes = [
+            "i really really hope you can stop blaming yourself for the things you can't control...",
+            "ataa jangan terlalu keras sama diri sendii yaa...",
+            "makasii udaa jadi ketua mpk yang hebatttt...",
+            "miss you my favorite star..."
+        ];
         
         function gantiKata() {
             let randomIndex = Math.floor(Math.random() * quotes.length);
-            document.getElementById("quoteText").innerText = quotes[randomIndex];
+            let quoteElement = document.getElementById("quoteText");
+
+            // Animasi perubahan teks
+            quoteElement.style.opacity = "0";
+            setTimeout(() => {
+                quoteElement.innerText = quotes[randomIndex];
+                quoteElement.style.opacity = "1";
+            }, 500);
         }
     </script>
 </body>
